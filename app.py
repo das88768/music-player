@@ -95,10 +95,9 @@ playlist = Listbox(listbox_frame, font=('Helvetica', 11), selectbackground='Gold
 # Make the scroll bar to scroll the playlist.
 scroll_bar = Scrollbar(listbox_frame, orient=VERTICAL)
 scroll_bar.pack(side=RIGHT, fill=BOTH)
-
-# playlist.config(yscrollcommand=scroll_bar.set)
 scroll_bar.config(command=playlist.yview)
 
+playlist.config(yscrollcommand=scroll_bar.set)
 playlist.pack(fill=BOTH, padx=5, pady=5)
 
 # SongFrame labels.
