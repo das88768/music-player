@@ -8,7 +8,7 @@ def play_song(song_name: StringVar, song_list: Listbox, status: StringVar):
     # Set the name of the current played song on the window.
     name = song_list.get(ACTIVE)
     if len(name) > 40:
-        name = (name[:40] + '.mp3')
+        name = (name[:35] + '.mp3')
     song_name.set(name)
 
     # Load the selected song and start the mixer/play the song.
