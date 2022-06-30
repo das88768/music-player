@@ -1,6 +1,9 @@
 import pygame.mixer as mixer
 from tkinter import *
 from tkinter import filedialog
+import audio_metadata
+from PIL import ImageTk, Image
+from io import BytesIO
 import os
 
 # Function to play the selected songs from the list or directory.
@@ -21,6 +24,8 @@ def play_song(song_name: StringVar, song_list: Listbox, status: StringVar):
     # Active the disabled resume button.
     if resume_btn['state'] == DISABLED:
         resume_btn['state'] = NORMAL
+
+    # get_song_img(song_list.get(ACTIVE))
 
 # Function to stop the current song and set the status of the player to 'stop'.
 def stop_song(status: StringVar):
@@ -59,6 +64,20 @@ def load(listbox):
 def volume(x):
     value = volume_slider.get()
     mixer.music.set_volume(value/100)
+
+def get_song_img(sl):
+
+    #get all metadata of song.mp3
+    metadata=audio_metadata.load(sl)
+    artwork = metadata.pictures[0].data
+    stream = BytesIO(artwork)
+    
+    img = Image.open(stream)
+    img_size = img.resize((50, 50))
+    new_img = ImageTk.PhotoImage(img_size)
+
+    image_label = Label(song_frame, image=new_img)
+    image_label.place(x=30, y=15)
 
 # Starting the mixer.
 mixer.init()
