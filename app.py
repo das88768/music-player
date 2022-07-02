@@ -6,7 +6,6 @@ from PIL import ImageTk, Image
 from io import BytesIO
 import os
 import time
-from mutagen.mp3 import MP3
 
 # Function to play the selected songs from the list or directory.
 def play_song(song_name: StringVar, song_list: Listbox, status: StringVar):
@@ -20,12 +19,13 @@ def play_song(song_name: StringVar, song_list: Listbox, status: StringVar):
     mixer.music.load(song_list.get(ACTIVE))
     mixer.music.play()
 
-    # Call the play_time function when the song is played.
+    # Extract the total song duration from the metadata of the song.
     global duration
     metadata=audio_metadata.load(song_list.get(ACTIVE))
     song_len = metadata.streaminfo['duration']
     duration = time.strftime('%M:%S', time.gmtime(song_len))
-    
+
+    # Call the play_time function when the song is played.
     play_time()
 
     # Set the status of the player to Playing.
