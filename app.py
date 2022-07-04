@@ -85,12 +85,13 @@ def play_time():
     # Convert the time into minute and second format.
     converted_current_time = time.strftime('%M:%S', time.gmtime(current_time))
     
-    # show the time on the duration frame.
+    # show the time on the duration frame and reset the timer when the song is stopped.
     song_len = duration
     if song_status.get() != 'Song Stopped!!':
         duration_frame.config(text=f"Time Elapsed: {converted_current_time} / {song_len}")
     else:
        duration_frame.config(text="Time Elapsed: 00:00 / 00:00") 
+
     # Update the time frame every second.
     duration_frame.after(1000, play_time)
 
