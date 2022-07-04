@@ -130,7 +130,7 @@ listbox_frame.place(x=505, y=0)
 volume_frame = LabelFrame(root, text="Volume", bg="Turquoise")
 volume_frame.place(x=400, y=85)
 
-duration_frame = Label(root, bg='pink', text='Time', bd=2, relief=GROOVE, width=28, height=2)
+duration_frame = Label(root, bg='pink', text='Time Elapsed: 00:00 / 00.00', bd=2, relief=GROOVE, width=28, height=2, font=('Times', 10, 'bold'))
 duration_frame.place(x=505, y=214)
 
 # StringVar is used to manipulate text in entry, labels.
