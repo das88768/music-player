@@ -87,8 +87,10 @@ def play_time():
     
     # show the time on the duration frame.
     song_len = duration
-    duration_frame.config(text=f"Time Elapsed: {converted_current_time} / {song_len}")
-    
+    if song_status.get() != 'Song Stopped!!':
+        duration_frame.config(text=f"Time Elapsed: {converted_current_time} / {song_len}")
+    else:
+       duration_frame.config(text="Time Elapsed: 00:00 / 00:00") 
     # Update the time frame every second.
     duration_frame.after(1000, play_time)
 
