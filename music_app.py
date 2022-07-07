@@ -116,17 +116,17 @@ root.title('My Music Player')
 root.resizable(False, False)
 
 # Creating the frames of the music player
-song_frame = LabelFrame(root, text="Current song", bg='LightBlue', width=506, height=80)
+song_frame = LabelFrame(root, text="Current song", bg='LightBlue', width=506, height=90)
 song_frame.place(x=0, y=0)
 
-button_frame = LabelFrame(root, text="Control Buttons", bg='Turquoise', width=506, height=170)
-button_frame.place(y=80)
+button_frame = LabelFrame(root, text="Control Buttons", bg='Turquoise', width=506, height=160)
+button_frame.place(y=90)
 
 listbox_frame = LabelFrame(root, text='Playlist', bg="RoyalBlue", height=200, width=300)
 listbox_frame.place(x=505, y=0)
 
 volume_frame = LabelFrame(root, text="Volume", bg="Turquoise")
-volume_frame.place(x=400, y=85)
+volume_frame.place(x=400, y=100)
 
 duration_frame = Label(root, bg='pink', text='Time Elapsed: 00:00 / 00:00', bd=2, relief=GROOVE, width=28, height=2, font=('Times', 10, 'bold'))
 duration_frame.place(x=505, y=214)
@@ -169,7 +169,7 @@ dir_btn = Button(button_frame, text="Load Directory", bg='Aqua', font=("Georgia"
 dir_btn.place(x=10, y=75)
 
 # Control the volume of the song.
-volume_slider = Scale(volume_frame, from_=100, to=0, orient=VERTICAL, command=volume, length=90, bg='orange', cursor='hand2')
+volume_slider = Scale(volume_frame, from_=100, to=0, orient=VERTICAL, command=volume, length=110, bg='orange', cursor='hand2')
 volume_slider.set(30)
 volume_slider.pack()
 
