@@ -75,9 +75,6 @@ def volume(x):
     value = volume_slider.get()
     mixer.music.set_volume(value/100)
 
-def slide(x):
-    pass
-
 def play_time():
     # Fetch the song's current time position,
     current_time = mixer.music.get_pos() / 1000
@@ -86,13 +83,12 @@ def play_time():
     converted_current_time = time.strftime('%M:%S', time.gmtime(current_time))
     
     # show the time on the duration frame and reset the timer when the song is stopped.
-    song_len = duration
+    song_duration = duration
     if song_status.get() != 'Song Stopped!!':
-        duration_frame.config(text=f"Time Elapsed: {converted_current_time} / {song_len}")
+        duration_frame.config(text=f"Time Elapsed: {converted_current_time} / {song_duration}")
     else:
        duration_frame.config(text="Time Elapsed: 00:00 / 00:00") 
 
-    # Update the time frame every second.
     duration_frame.after(1000, play_time)
 
 def get_song_img(sl):
@@ -133,7 +129,7 @@ listbox_frame.place(x=505, y=0)
 volume_frame = LabelFrame(root, text="Volume", bg="Turquoise")
 volume_frame.place(x=400, y=85)
 
-duration_frame = Label(root, bg='pink', text='Time Elapsed: 00:00 / 00.00', bd=2, relief=GROOVE, width=28, height=2, font=('Times', 10, 'bold'))
+duration_frame = Label(root, bg='pink', text='Time Elapsed: 00:00 / 00:00', bd=2, relief=GROOVE, width=28, height=2, font=('Times', 10, 'bold'))
 duration_frame.place(x=505, y=214)
 
 # StringVar is used to manipulate text in entry, labels.
@@ -177,10 +173,6 @@ dir_btn.place(x=10, y=55)
 volume_slider = Scale(volume_frame, from_=100, to=0, orient=VERTICAL, command=volume, length=90, bg='orange', cursor='hand2')
 volume_slider.set(30)
 volume_slider.pack()
-
-# Position slider to move at any position in the music.
-slider = Scale(root, from_=0, to=100, orient=HORIZONTAL, command=slide, length=250, cursor='hand2')
-slider.place(x=120, y=200)
 
 Label(root, textvariable=song_status, bg='SteelBlue', font=('Times', 8), justify=LEFT).pack(side=BOTTOM, fill=X)
 
