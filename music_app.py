@@ -166,7 +166,7 @@ resume_btn = Button(button_frame, text='Resume', bg="Aqua", font=("Georgia", 13)
 resume_btn.place(x=285, y=10)
 
 dir_btn = Button(button_frame, text="Load Directory", bg='Aqua', font=("Georgia", 13), width=35, command=lambda: load(playlist))
-dir_btn.place(x=10, y=55)
+dir_btn.place(x=10, y=75)
 
 # Control the volume of the song.
 volume_slider = Scale(volume_frame, from_=100, to=0, orient=VERTICAL, command=volume, length=90, bg='orange', cursor='hand2')
