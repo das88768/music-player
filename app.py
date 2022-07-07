@@ -20,7 +20,7 @@ def play_song(song_name: StringVar, song_list: Listbox, status: StringVar):
     mixer.music.play()
 
     # Extract the total song duration from the metadata of the song.
-    global duration
+    global duration, metadata
     metadata=audio_metadata.load(song_list.get(ACTIVE))
     song_len = metadata.streaminfo['duration']
     duration = time.strftime('%M:%S', time.gmtime(song_len))
@@ -35,7 +35,8 @@ def play_song(song_name: StringVar, song_list: Listbox, status: StringVar):
     if resume_btn['state'] == DISABLED:
         resume_btn['state'] = NORMAL
 
-    # get_song_img(song_list.get(ACTIVE))
+    # Show the cover photo of the song.
+    # get_song_img()
 
 # Function to stop the current song and set the status of the player to 'stop'.
 def stop_song(status: StringVar):
@@ -91,9 +92,8 @@ def play_time():
 
     duration_frame.after(1000, play_time)
 
-def get_song_img(sl):
-    #get all metadata of song.mp3
-    metadata=audio_metadata.load(sl)
+def get_song_img():
+    # get all metadata of song.mp3
     artwork = metadata.pictures[0].data
     stream = BytesIO(artwork)
     
@@ -101,8 +101,8 @@ def get_song_img(sl):
     img_size = img.resize((50, 50))
     new_img = ImageTk.PhotoImage(img_size)
 
-    image_label = Label(song_frame, image=new_img)
-    image_label.place(x=30, y=15)
+    image_label = Label(root, image=new_img)
+    image_label.place(x=150, y=190)
 
 # Starting the mixer.
 mixer.init()
@@ -114,7 +114,6 @@ root.title('My Music Player')
 
 # It helps to stop the change of the window size.
 root.resizable(False, False)
-
 
 # Creating the frames of the music player
 song_frame = LabelFrame(root, text="Current song", bg='LightBlue', width=506, height=80)
