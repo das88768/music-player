@@ -154,16 +154,16 @@ song_lbl.place(x=150, y=20)
 
 # Buttons in the main screen.
 pause_btn = Button(button_frame, text="Pause", bg='Aqua', font=('Georgia', 13), width=7, command=lambda: pause_song(song_status))
-pause_btn.place(x=15, y=10)
+pause_btn.place(x=15, y=20)
 
 stop_btn = Button(button_frame, text="Stop", bg='Aqua', font=("Georgia", 13), width=7, command=lambda: stop_song(song_status))
-stop_btn.place(x=105, y=10)
+stop_btn.place(x=105, y=20)
 
 play_btn = Button(button_frame, text="Play", bg='Aqua', font=("Georgia", 13), width=7, command=lambda: play_song(current_song, playlist, song_status))
-play_btn.place(x=195, y=10)
+play_btn.place(x=195, y=20)
 
 resume_btn = Button(button_frame, text='Resume', bg="Aqua", font=("Georgia", 13), width=7, command=lambda: resume_song(song_status))
-resume_btn.place(x=285, y=10)
+resume_btn.place(x=285, y=20)
 
 dir_btn = Button(button_frame, text="Load Directory", bg='Aqua', font=("Georgia", 13), width=35, command=lambda: load(playlist))
 dir_btn.place(x=10, y=75)
