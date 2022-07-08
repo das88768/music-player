@@ -50,3 +50,7 @@ $ git clone https://github.com/das88768/music-player.git
 ```
 python music_app.py
 ```
+
+* A tkinter GUI will appear:
+
+  ![image](https://user-images.githubusercontent.com/89207002/177944288-5ac0e395-af5e-4988-a44e-af2d2e03dc2f.png)
