@@ -15,6 +15,10 @@ This project is created with:
 To run this project on local environment:
 * Open Git Bash.
 * Change the current working directory to the location where you want the cloned directory.
-* Type git clone, and then paste the URL you copied earlier.
+* Type git clone, and then paste the below URL.
+
+'''
 $ git clone https://github.com/das88768/music-player.git
+'''
+
 * Press Enter to create your local clone.
