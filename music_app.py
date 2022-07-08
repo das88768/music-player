@@ -1,6 +1,3 @@
-import matplotlib 
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 import pygame.mixer as mixer
 from tkinter import *
 from tkinter import filedialog
