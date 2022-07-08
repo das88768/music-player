@@ -40,12 +40,12 @@ $ git clone https://github.com/das88768/music-player.git
 
   ![image](https://user-images.githubusercontent.com/89207002/177941606-9409e9ce-6508-4d97-97fa-fad02794413a.png)
 
-* Open the requirements.txt file
+* Open the **requirements.txt** file
 * Install all the modules listed using:
  ```
  pip install module-name
  ```
-* Then open the music_app.py
+* Then open the **music_app.py**
 * And enter the following command on terminal:
 ```
 python music_app.py
@@ -55,8 +55,8 @@ python music_app.py
 
   ![image](https://user-images.githubusercontent.com/89207002/177944288-5ac0e395-af5e-4988-a44e-af2d2e03dc2f.png)
 
-* Click on Load Directory Button.
-* Navigate to the folder where songs are stored on your pc and click on select folder.
+* Click on **[Load Directory]** Button.
+* Navigate to the folder where songs are stored on your pc and click on **[Select Folder]**.
   
   ![image](https://user-images.githubusercontent.com/89207002/177945231-07aa0591-699a-4d4a-b2ef-c8946907c1ed.png)
   
@@ -64,7 +64,7 @@ python music_app.py
 
   ![image](https://user-images.githubusercontent.com/89207002/177945694-6aa3e9f4-4396-4cbe-8c3a-025fb327df97.png)
 
-* Select any song from the playlist box and click on Play Button.
+* Select any song from the playlist box and click on **[Play]** Button.
 * The selected song will be start to play the song.
 
   ![image](https://user-images.githubusercontent.com/89207002/177946383-89295775-4713-451f-981e-afb1ca00b727.png)
