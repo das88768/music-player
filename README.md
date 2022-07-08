@@ -40,4 +40,13 @@ $ git clone https://github.com/das88768/music-player.git
 
   ![image](https://user-images.githubusercontent.com/89207002/177941606-9409e9ce-6508-4d97-97fa-fad02794413a.png)
 
-
+* Open the requirements.txt file
+* Install all the modules listed using:
+ ```
+ pip install module-name
+ ```
+* Then open the music_app.py
+* And enter the following command on terminal:
+```
+python music_app.py
+```
