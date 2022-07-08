@@ -1,4 +1,4 @@
-# music-player
+# Music Player
 It is a tkinter based GUI Python Music Player app.
 
 ## Technologies
