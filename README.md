@@ -6,6 +6,9 @@ This project is created with:
 * Python 3.7
 * Tkinter
 * Pygame
+* pygame Mixer
+* Audio Metadata
+* Pillow/PIL
 * VS-Code
 
 ## Setup
