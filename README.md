@@ -32,3 +32,9 @@ $ git clone https://github.com/das88768/music-player.git
 > Unpacking objects: 100% (10/10), done.
 ```
 * And you are done with the setup.
+
+## How to run the app
+* Open the VS-Code
+* Go to the project cloned directory
+* And you will see something like this on your left side Explorer of vs code.
+* ![image](https://user-images.githubusercontent.com/89207002/177941606-9409e9ce-6508-4d97-97fa-fad02794413a.png)
